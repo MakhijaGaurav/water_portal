@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/','DashboardPagesController');
+Route::get('/dashboard/bills','DashboardPagesController@getAllBills');
+Route::get('/dashboard/complains','DashboardPagesController@getAllComplains');
+Route::get('/dashboard/feedback','DashboardPagesController@getAllFeedbacks');
+Route::get('/dashboard/users','DashboardPagesController@getAllUsers');
+Route::get('/dashboard/consumption/all','DashboardPagesController@getAllConsumption');
+Route::get('/dashboard/consumption/unit','DashboardPagesController@getUnitConsumption');
+Route::get('/dashboard/consumption/family','DashboardPagesController@getFamilyConsumption');
