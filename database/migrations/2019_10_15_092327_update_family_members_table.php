@@ -13,10 +13,8 @@ class UpdateFamilyMembersTable extends Migration
      */
     public function up()
     {
-        //
-        Schema::table('family_members',function($table){
-            $table->string('member_email')->after('member_last_name');
-            $table->string('member_password')->after('member_email');
+        Schema::table('family_members', function($table){
+        $table->dropColumn(['member_email', 'member_password']);
         });
     }
 
