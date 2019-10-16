@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Family;
+use App\FamilyMember;
+use App\Bill;
+
+
 
 class DashboardPagesController extends Controller
 {
-    function getAllBills(){
-        return view('dashboard.view_all_bills');
+
+    function getAllBills(Bill $bills){
+        $bills = Bill::all();
+        return view('dashboard.view_all_bills',compact('bills'));
     }
     
     function getAllComplains(){
@@ -18,8 +25,9 @@ class DashboardPagesController extends Controller
         return view('dashboard.view_all_feedbacks');
     }
     
-    function getAllUsers(){
-        return view('dashboard.view_all_users');
+    function getAllUsers(FamilyMember $members){
+        $members = FamilyMember::all();
+        return view('dashboard.view_all_users',compact('members'));
     }
     
     function getAllConsumption(){

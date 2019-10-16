@@ -11,7 +11,7 @@
 |
 */
 
-//Route::get('/','DashboardPagesController');
+// Route::get('/','DashboardPagesController');
 Route::get('/dashboard/bills','DashboardPagesController@getAllBills');
 Route::get('/dashboard/complains','DashboardPagesController@getAllComplains');
 Route::get('/dashboard/feedback','DashboardPagesController@getAllFeedbacks');

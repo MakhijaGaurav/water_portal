@@ -3,29 +3,25 @@
     <thead>
       <tr>
         <th>SR.NO</th>
-        <th>FAMILY HEAD</th>
-        <th>LITRES CONSUMED</th>
-        <th>BILL AMOUNT</th>
-        <th>START DATE</th>
-        <th>END DATE</th>
-        <th>PAID</th>
+        <th>Family Id</th>
+        <th>Liters</th>
+        <th>Amount</th>
+        <th>Start</th>
+        <th>Last</th>
+        <th>Paid</th>
       </tr>
     </thead>
     <tbody>
+      @foreach($bills as $bill)
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{ $bill-> bill_id }}</td>
+        <td>{{ $bill-> family_id }}</td>
+        <td>{{ $bill-> litres_consumed }}</td>
+        <td> {{ $bill-> bill_amount }}</td>
+        <td>{{ $bill-> bill_start_date }}</td>
+        <td>{{ $bill-> bill_end_date }}</td>
+        <td>{{ $bill-> bill_paid }}</td>
       </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+      @endforeach
     </tbody>
   </table>

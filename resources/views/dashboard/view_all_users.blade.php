@@ -2,26 +2,22 @@
      <thead>
          <tr>
              <th>SR.NO</th>
-             <th>MEMBER FIRST NAME</th>
-             <th>MEMBER LAST NAME</th>
-             <th>FAMILY</th>
-             <th>REGISTERED ON</th>
+             <th>First Name</th>
+             <th>Last Name</th>
+             <th>Family Id</th>
+             <th>Registerd On</th>
          </tr>
      </thead>
      <tbody>
+        @foreach($members  as $member)
          <tr>
-             <td>1</td>
-             <td>Moksh</td>
-             <td>Manch</td>
-             <td>22</td>
-             <td>22/10/2018</td>
+            
+             <td>{{ $member->member_id }}</td>
+             <td>{{ $member-> member_first_name }}</td>
+             <td>{{ $member->member_last_name }}</td>
+             <td>{{ $member-> family_id}}</td>
+             <td>{{ $member-> created_at }}</td>
          </tr>
-          <tr>
-             <td>1</td>
-             <td>Moksh</td>
-             <td>Manch</td>
-             <td>22</td>
-             <td>22/10/2018</td>
-         </tr>
+         @endforeach
      </tbody>
  </table>
