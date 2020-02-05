@@ -16,10 +16,11 @@ class FamilyService{
             "address_zip" => $address_zip
         ]);
     }
-    public function update($id,$address_first_line,$address_second_line,$address_landmark,$address_city,$address_state,$address_zip)
+    public function update($id,$head,$address_first_line,$address_second_line,$address_landmark,$address_city,$address_state,$address_zip)
     {
         $family = Family::where('id', '=',$id)->get();
         $family->update([
+            "head" => $head,
             "address_first_line" => $address_first_line,
             "address_second_line" => $address_second_line,
             "address_landmark" => $address_landmark,
