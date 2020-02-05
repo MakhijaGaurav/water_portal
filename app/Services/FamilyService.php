@@ -18,7 +18,7 @@ class FamilyService{
     }
     public function update($id,$head,$address_first_line,$address_second_line,$address_landmark,$address_city,$address_state,$address_zip)
     {
-        $family = Family::where('id', '=',$id)->get();
+        $family = Family::findOrFail($id);
         $family->update([
             "head" => $head,
             "address_first_line" => $address_first_line,
@@ -28,6 +28,11 @@ class FamilyService{
             "address_state" => $address_state,
             "address_zip" => $address_zip
         ]);
+    }
+    public function getAllFamily()
+    {
+        $family = Family::all();
+        return $family;
     }
 
     public function destroy($id)

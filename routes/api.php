@@ -18,3 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post("/bill/create","Api\BillRestController@store");
+Route::post("/family/create","Api\FamilyRestController@store");
+Route::get("/family/{family_id}/update","Api\FamilyRestController@update");
+Route::get("/family/{family_id}/destroy","Api\FamilyRestController@destroy");
+Route::get("/family/all","Api\FamilyRestController@getAllFamily");
