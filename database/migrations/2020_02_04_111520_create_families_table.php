@@ -24,7 +24,7 @@ class CreateFamiliesTable extends Migration
             $table->string('address_state',255);
             $table->string('address_zip',255);
             $table->timestamps();
-            $table->softDeletesg();
+            $table->softDeletes();
         });
     }
 
