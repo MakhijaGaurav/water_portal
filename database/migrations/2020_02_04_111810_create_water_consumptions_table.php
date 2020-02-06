@@ -15,12 +15,14 @@ class CreateWaterConsumptionsTable extends Migration
     {
         Schema::create('water_consumptions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tag',255);
+            $table->string('rfid',255);
             $table->double('litres_consumed');
             $table->dateTime('start_time');
             $table->dateTime('end_time');
             $table->integer('unit_no');
             $table->string('unit_type');
+            $table->bigInteger('created_by')->default(0);
+            $table->bigInteger('updated_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

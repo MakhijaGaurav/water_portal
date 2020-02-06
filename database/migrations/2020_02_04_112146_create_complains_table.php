@@ -15,9 +15,11 @@ class CreateComplainsTable extends Migration
     {
         Schema::create('complains', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('complaint_name');
+            $table->bigInteger('complainant');
             $table->string('msg',255);
             $table->timestamps();
+            $table->bigInteger('created_by')->default(0);
+            $table->bigInteger('updated_by')->default(0);
             $table->softDeletes();
         });
     }

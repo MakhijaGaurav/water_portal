@@ -17,6 +17,8 @@ class CreateComplainImagesTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('complain_id');
             $table->string('img',255);
+            $table->bigInteger('created_by')->default(0);
+            $table->bigInteger('updated_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

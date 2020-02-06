@@ -23,6 +23,8 @@ class CreateFamiliesTable extends Migration
             $table->string('address_city',255);
             $table->string('address_state',255);
             $table->string('address_zip',255);
+            $table->bigInteger('created_by')->default(0);
+            $table->bigInteger('updated_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
