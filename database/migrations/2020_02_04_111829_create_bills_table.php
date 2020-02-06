@@ -16,9 +16,11 @@ class CreateBillsTable extends Migration
         Schema::create('bills', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('family_id');
+            $table->decimal('total_amount');
             $table->tinyInteger('bill_paid');
             $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            $table->bigInteger('created_by')->default(0);
+            $table->bigInteger('updated_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

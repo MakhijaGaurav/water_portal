@@ -17,6 +17,8 @@ class CreateFamilyHeadsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('family_id');
             $table->bigInteger('user_id');
+            $table->bigInteger('created_by')->default(0);
+            $table->bigInteger('updated_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
