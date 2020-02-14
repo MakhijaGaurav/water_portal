@@ -22,3 +22,4 @@ Route::post("/family/create","Api\FamilyRestController@store");
 Route::get("/family/{family_id}/update","Api\FamilyRestController@update");
 Route::get("/family/{family_id}/destroy","Api\FamilyRestController@destroy");
 Route::get("/family/all","Api\FamilyRestController@getAllFamily");
+Route::get('check/{rfid}','Api\RfidController@checkIfValid');

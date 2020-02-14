@@ -81,4 +81,5 @@ class RfidController extends Controller
     {
         //
     }
+
 }
