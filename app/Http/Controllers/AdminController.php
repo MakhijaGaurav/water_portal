@@ -81,4 +81,12 @@ class AdminController extends Controller
     {
         //
     }
+
+    /**
+     * ADD USER VIEW
+     */
+    public function addUser()
+    {
+        return view('admin.user.create');
+    }
 }
