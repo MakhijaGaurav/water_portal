@@ -13,6 +13,7 @@
 
 Route::prefix('admin')->group(function () {
     Route::resource('/','AdminController');
+    Route::get('/user/add','AdminController@addUser');
 });
 
 Route::get('/login', function () {

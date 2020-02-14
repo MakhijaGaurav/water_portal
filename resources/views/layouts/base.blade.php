@@ -31,10 +31,17 @@
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
 
-        <!-- Main Content -->
-        @yield('page-content')
-        <!-- End of Main Content -->
+            <!--NAV BAR-->
+            @include('includes.nav')
+            <!--NAV BAR-->
+
+            <!-- Main Content -->
+            @yield('page-content')
+            <!-- End of Main Content -->
+
+        </div>
 
         <!-- Footer -->
         @yield('footer')
