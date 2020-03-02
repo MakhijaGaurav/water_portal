@@ -17,6 +17,8 @@ class RfidController extends Controller
 
     public function checkIfValid($rfid)
     {
-        return response()->json($this->rfidService->checkIfValid($rfid)[0]->reason);
+        $result = $this->rfidService->checkIfValid($rfid);
+        return response()->json($result);
+
     }
 }

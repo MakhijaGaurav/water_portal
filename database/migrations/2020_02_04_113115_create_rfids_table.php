@@ -16,7 +16,7 @@ class CreateRfidsTable extends Migration
         Schema::create('rfids', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('tag_data',255);
-            $table->string('tag_number,255');
+            $table->string('tag_number',255);
             $table->bigInteger('allocated_to')->default(0);
             $table->bigInteger('created_by')->default(0);
             $table->bigInteger('updated_by')->default(0);
