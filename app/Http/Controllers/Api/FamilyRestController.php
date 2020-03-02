@@ -59,6 +59,8 @@ class FamilyRestController extends Controller
     {
         return response()->json($this->familyService->getAllConsumption($id),200);
     }
-
-
+    public function getAllBills($id)
+    {
+        return response()->json($this->familyService->getAllBills($id));
+    }
 }
