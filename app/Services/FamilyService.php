@@ -1,6 +1,7 @@
 <?php
 namespace App\Services;
 use App\Family;
+use Illuminate\Support\Facades\DB;
 
 class FamilyService{
     public function store($surname,$head,$address_first_line,$address_second_line,$address_landmark,$address_city,$address_state,$address_zip)
@@ -72,7 +73,13 @@ class FamilyService{
 
     public function getAllBills($id)
     {
-        $bills = Fa
+        $bills = Family::join('bills','bills.family_id','families.id')
+                         ->where('families.id','=',$id)
+                         ->orderBy('start_date','desc')
+                         ->select('total_amount','bill_paid',DB::raw('DATE(start_date) as start_date'),
+                         DB::raw('DATE(DATE_ADD(start_date,INTERVAL 30 DAY)) as end_date'))
+                         ->get();
+        return $bills;
     }
 
 }
