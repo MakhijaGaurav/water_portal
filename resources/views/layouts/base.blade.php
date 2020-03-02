@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>BMC</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset("assets/vendor/fontawesome-free/css/all.min.css")}}" rel="stylesheet" type="text/css">
@@ -31,10 +31,17 @@
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
 
-        <!-- Main Content -->
-        @yield('page-content')
-        <!-- End of Main Content -->
+            <!--NAV BAR-->
+            @include('includes.nav')
+            <!--NAV BAR-->
+
+            <!-- Main Content -->
+            @yield('page-content')
+            <!-- End of Main Content -->
+
+        </div>
 
         <!-- Footer -->
         @yield('footer')

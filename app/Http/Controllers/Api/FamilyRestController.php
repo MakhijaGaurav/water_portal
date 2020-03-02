@@ -43,4 +43,22 @@ class FamilyRestController extends Controller
     {
         return response()->json($this->familyService->getAllFamily(),200);
     }
+
+    public function getRfidDetails($id)
+    {
+        //  dd($this->familyService->getRfidDetails($id));
+        return response()->json($this->familyService->getRfidDetails($id),200);
+    }
+
+    public function getAllMembers($id)
+    {
+        return response()->json($this->familyService->getAllMembers($id),200);
+    }
+
+    public function getAllConsumption($id)
+    {
+        return response()->json($this->familyService->getAllConsumption($id),200);
+    }
+
+
 }

@@ -2,7 +2,7 @@
 namespace App\Services;
 use App\Bill;
 
-class BillService{
+class   BillService{
 
     public function store($family_id,$bill_paid,$start_date,$end_date)
     {

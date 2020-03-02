@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RfidController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class RfidController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.index');
     }
 
     /**
@@ -82,4 +82,11 @@ class RfidController extends Controller
         //
     }
 
+    /**
+     * ADD USER VIEW
+     */
+    public function addUser()
+    {
+        return view('admin.user.create');
+    }
 }

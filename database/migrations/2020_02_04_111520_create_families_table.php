@@ -16,7 +16,6 @@ class CreateFamiliesTable extends Migration
         Schema::create('families', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('surname',255);
-            $table->bigInteger('head');
             $table->string('address_first_line',255);
             $table->string('address_second_line',255);
             $table->string('address_landmark',255);

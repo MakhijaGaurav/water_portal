@@ -40,4 +40,39 @@ class FamilyService{
         $family = Family::findOrFail($id);
         $family->delete();
     }
+
+    public function getRfidDetails($id)
+    {
+        $cards = Family::join('rfids','rfids.allocated_to','families.id')
+                        ->where('families.id','=',$id)
+                        ->select(['rfids.tag_number AS card_number'])
+                        ->get();
+        return $cards;
+    }
+
+    public function getAllMembers($id)
+    {
+        $members = Family::join('family_users','family_users.family_id','families.id')
+                            ->join('users','users.id','family_users.user_id')
+                            ->where('families.id','=',$id)
+                            ->select(['users.name AS member_name','users.email AS member_email','users.phone AS member_phone'])
+                            ->get();
+        return $members;
+    }
+
+    public function getAllConsumption($id)
+    {
+        $consumption = Family::join('rfids','rfids.allocated_to','families.id')
+                                ->join('water_consumptions','water_consumptions.rfid','rfids.tag_data')
+                                ->where('families.id','=',$id)
+                                ->select(['rfids.tag_number','unit_no','unit_type','litres_consumed','start_time','end_time'])
+                                ->get();
+        return $consumption;
+    }
+
+    public function getAllBills($id)
+    {
+        $bills = Fa
+    }
+
 }
