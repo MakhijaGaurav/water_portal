@@ -28,7 +28,7 @@
         <div id="users" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="/admin/user/add">Add User</a>
-                <a class="collapse-item" href="/admin/user/all">All Users</a>
+                <a class="collapse-item" href="/admin/user">All Users</a>
             </div>
         </div>
     </li>
