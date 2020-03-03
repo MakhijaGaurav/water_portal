@@ -28,7 +28,7 @@
         <div id="users" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="/admin/user/add">Add User</a>
-                <a class="collapse-item" href="/admin/user/all">All Users</a>
+                <a class="collapse-item" href="/admin/user">All Users</a>
             </div>
         </div>
     </li>
@@ -43,7 +43,7 @@
         <div id="family" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="/admin/family/add">Add Family</a>
-                <a class="collapse-item" href="/admin/family/all">All Families</a>
+                <a class="collapse-item" href="/admin/family">All Families</a>
             </div>
         </div>
     </li>
@@ -58,7 +58,7 @@
         <div id="rfid" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="/admin/rfid/add">Add RFID</a>
-                <a class="collapse-item" href="/admin/rfid/all">View RFID's</a>
+                <a class="collapse-item" href="/admin/rfid">View RFID's</a>
             </div>
         </div>
     </li>
@@ -80,7 +80,7 @@
         <div id="complain" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="/admin/complain/add">Add Complain</a>
-                <a class="collapse-item" href="/admin/complain/all">All Complains</a>
+                <a class="collapse-item" href="/admin/complain">All Complains</a>
             </div>
         </div>
     </li>
@@ -96,7 +96,7 @@
         <div id="feedback" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="/admin/feedback/add">Add Feedback</a>
-                <a class="collapse-item" href="/admin/feedback/all">All Feedbacks</a>
+                <a class="collapse-item" href="/admin/feedback">All Feedbacks</a>
             </div>
         </div>
     </li>
