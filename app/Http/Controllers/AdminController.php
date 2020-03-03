@@ -83,10 +83,17 @@ class AdminController extends Controller
     }
 
     /**
-     * ADD USER VIEW
+     * ADD USER BLADE FILE
      */
     public function addUser()
     {
         return view('admin.user.create');
     }
+
+    //RETURNS ALL USERS WITH VIEW
+    public function getAllUser()
+    {
+        return view('admin.user.index');
+    }
+
 }
