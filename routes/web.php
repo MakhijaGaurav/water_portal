@@ -14,8 +14,10 @@
 Route::prefix('admin')->group(function () {
     Route::resource('/','AdminController');
     Route::get('/user/add','AdminController@addUser');
+    Route::get('/user/all','AdminController@getAllUser');
 });
 
+Route::redirect('/','/login');
 Route::get('/login', function () {
     return view('auth.login');
 });
@@ -23,3 +25,6 @@ Route::get('/login', function () {
 
 
 
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');

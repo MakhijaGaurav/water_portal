@@ -39,6 +39,8 @@ Route::get("/family/{family_id}/card/all",'Api\FamilyRestController@getRfidDetai
 Route::get("/family/{family_id}/consumption/all",'Api\FamilyRestController@getAllConsumption');
 //get all family bills
 Route::get('family/{family_id}/bill/all','Api\FamilyRestController@getAllBills');
+//get all complains
 
 
+//check for scanned rfid
 Route::get('check/{rfid}','Api\RfidController@checkIfValid');
