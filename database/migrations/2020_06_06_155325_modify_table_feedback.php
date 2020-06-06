@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterTableFeedback extends Migration
+class ModifyTableFeedback extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class AlterTableFeedback extends Migration
     public function up()
     {
         Schema::table('feedback', function (Blueprint $table) {
-            //
+            $table->string('user_id')->change();
+            $table->rename('user_id','name');
         });
     }
 
@@ -25,7 +26,7 @@ class AlterTableFeedback extends Migration
      */
     public function down()
     {
-        Schema::table('feedback', function (Blueprint $table) {
+        Schema::table(''feedback'', function (Blueprint $table) {
             //
         });
     }
