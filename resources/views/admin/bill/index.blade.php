@@ -33,12 +33,12 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$bill->surname}}</td>
                             <td>{{$bill->address_city}}</td>
-                            <td>{{$bill->total_amount}}</td>
+                            <td><strong>{{$bill->total_amount}}</strong></td>
                             <td>{{$bill->start_date}}</td>
                             @if ($bill->bill_paid==0)
-                                <td>YES</td>
+                                <td><label for="" class="btn btn-success">YES</label></td>
                             @else
-                                <td>NO</td>
+                                <td><label for="" class="btn btn-danger">NO</label></td>
                             @endif
                         </tr>
                     @endforeach

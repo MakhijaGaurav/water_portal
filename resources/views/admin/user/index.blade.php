@@ -23,8 +23,6 @@
                             <td>Family</td>
                             <td>Address</td>
                             <td>Phone</td>
-                            <td>View</td>
-                            <td>Edit</td>
                             <td>Delete</td>
                         </tr>
                     </thead>
@@ -37,9 +35,7 @@
                             <td>{{$user->surname}}</td>
                             <td>{{$user->address_first_line}} ,{{$user->address_second_line}}, {{$user->address_city}}</td>
                             <td>{{$user->phone}}</td>
-                            <td>view</td>
-                            <td>edit</td>
-                            <td>delete</td>
+                            <td><button class="btn btn-danger">DELETE</button></td>
                         </tr>
                     @endforeach
                     </tbody>

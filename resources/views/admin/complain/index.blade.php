@@ -20,7 +20,6 @@
                     <tr>
                         <td>Sr. No</td>
                         <td>Name</td>
-                        <td>Address</td>
                         <td>Message</td>
                         <td>Images</td>
                         <td>Date</td>
@@ -29,13 +28,18 @@
                     </thead>
                     <tbody>
                     @foreach($complains as $complain)
-                        <td>{{$loop->iteration}}</td>
-                        <td>Name</td>
-                        <td>Address</td>
-                        <td>Message</td>
-                        <td>Images</td>
-                        <td>Date</td>
-                        <td>Status</td>
+                        <tr>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$complain->complainant}}</td>
+                            <td>{{$complain->msg}}</td>
+                            <td><a href="#" class="btn btn-primary">view</a></td>
+                            <td>{{$complain->created_at}}</td>
+                            @if($complain->status=='0')
+                                <td><button class="btn btn-danger">Resolve Now!</button></td>
+                            @else
+                                <td><button class="btn btn-success">Solved</button></td>
+                            @endif
+                        </tr>
                     @endforeach
                     </tbody>
                 </table>
