@@ -21,4 +21,13 @@ class RfidController extends Controller
         return response()->json($result);
 
     }
+
+    public function recordConsumption($rfid,$consumption)
+    {
+        $result = $this->rfidService->recordConsumption($rfid,$consumption);
+        return $result;
+    }
+
+
+
 }

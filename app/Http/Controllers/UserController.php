@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Family;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -13,7 +16,14 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::join('family_users','family_users.user_id','=','users.id')
+                ->join('families','families.id','=','family_users.family_id')
+                ->orderBy('families.id')
+                ->get();
+        return view('admin.user.index')->with([
+            'count' => 1,
+            'users' => $users
+        ]);
     }
 
     /**
@@ -34,7 +44,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "comes here";
+        dd($request);
     }
 
     /**
@@ -77,8 +88,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
-        //
+
+    }
+
+    public function addUser()
+    {
+        $family = Family::all();
+        return view('admin.user.create')->with([
+            'families' => $family
+        ]);
     }
 }

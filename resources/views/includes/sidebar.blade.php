@@ -10,7 +10,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/admin">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -21,7 +21,8 @@
 
     <!-- Nav Item - -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#users" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#users" aria-expanded="true"
+           aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-table"></i>
             <span>Users</span>
         </a>
@@ -36,7 +37,8 @@
 
     <!-- Nav Item - -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#family" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#family" aria-expanded="true"
+           aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-table"></i>
             <span>Family</span>
         </a>
@@ -51,7 +53,8 @@
 
     <!-- Nav Item - -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#rfid" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#rfid" aria-expanded="true"
+           aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-table"></i>
             <span>RFID</span>
         </a>
@@ -62,40 +65,39 @@
             </div>
         </div>
     </li>
-
     <!-- Nav Item - -->
     <li class="nav-item">
         <a class="nav-link" href="/admin/bill">
             <i class="fas fa-fw fa-table"></i>
-            <span>Bill</span></a>
+            <span>Bill</span>
+        </a>
     </li>
 
 
     <!-- Nav Item - -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#complain" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#complain" aria-expanded="true"
+           aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-table"></i>
             <span>Complains</span>
         </a>
         <div id="complain" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/admin/complain/add">Add Complain</a>
                 <a class="collapse-item" href="/admin/complain">All Complains</a>
             </div>
         </div>
     </li>
 
 
-
     <!-- Nav Item - -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#feedback" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#feedback" aria-expanded="true"
+           aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-table"></i>
             <span>Feedback</span>
         </a>
         <div id="feedback" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/admin/feedback/add">Add Feedback</a>
                 <a class="collapse-item" href="/admin/feedback">All Feedbacks</a>
             </div>
         </div>

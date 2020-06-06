@@ -12,19 +12,40 @@
 */
 
 Route::prefix('admin')->group(function () {
-    Route::resource('/','AdminController');
-    Route::get('/user/add','AdminController@addUser');
-    Route::get('/user','AdminController@getAllUser');
+    /*
+     * USER ROUTES
+     */
+    Route::resource('/', 'AdminController');
+    Route::get('/user/add', 'UserController@addUser');
+    Route::resource('/user', 'UserController');
+    Route::resource('/consumption','ConsumptionController');
+
+    /*
+     * FAMILY ROUTES
+     */
+    Route::get('/family/add', 'FamilyController@addFamily');
+    Route::resource('/family', 'FamilyController');
+
+    /*
+     * BILL ROUTES
+     */
+    Route::resource('/bill','BillController');
+
+    /*
+     * COMPLAIN ROUTES
+     */
+    Route::resource('/complain','ComplainController');
+
+    /*
+     * FEEDBACK ROUTES
+     */
+    Route::resource('/feedback','FeedBackController');
 });
 
-Route::redirect('/','/login');
+Route::redirect('/', '/login');
 Route::get('/login', function () {
     return view('auth.login');
 });
-
-
-
-
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Complain;
+use App\Family;
+use App\Feedback;
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,7 +17,16 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $user_count = User::all()->count();
+        $family_count = Family::all()->count();
+        $complain_count = Complain::all()->count();
+        $feedback_count = Feedback::all()->count();
+        return view('admin.index')->with([
+            "user_count"   => $user_count,
+            "family_count" => $family_count,
+            "complain_count" => $complain_count,
+            "feedback_count" => $feedback_count,
+        ]);
     }
 
     /**
@@ -79,21 +92,9 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 
-    /**
-     * ADD USER BLADE FILE
-     */
-    public function addUser()
-    {
-        return view('admin.user.create');
-    }
 
-    //RETURNS ALL USERS WITH VIEW
-    public function getAllUser()
-    {
-        return view('admin.user.index');
-    }
 
 }

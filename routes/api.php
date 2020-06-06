@@ -44,3 +44,6 @@ Route::get('family/{family_id}/bill/all','Api\FamilyRestController@getAllBills')
 
 //check for scanned rfid
 Route::get('check/{rfid}','Api\RfidController@checkIfValid');
+
+//get meter reading
+Route::get('/rfid/{rfid}/consumption/{consumption}','Api\RfidController@recordConsumption');

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\WaterConsumption;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ConsumptionController extends Controller
 {
@@ -13,7 +15,16 @@ class ConsumptionController extends Controller
      */
     public function index()
     {
-        //
+        $consumption = DB::table('water_consumptions')
+                        ->join('rfids','rfids.tag_data','water_consumptions.rfid')
+                        ->join('families','families.id','=','rfids.allocated_to')
+                        ->orderBy('water_consumptions.id','desc')
+                        ->get();
+        //dd($consumption);
+        return view('admin.water_consumption.index')->with([
+            'consumptions' => $consumption,
+            'count' => 1
+        ]);
     }
 
     /**

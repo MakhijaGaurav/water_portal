@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Complain;
 use Illuminate\Http\Request;
 
 class ComplainController extends Controller
@@ -13,7 +14,10 @@ class ComplainController extends Controller
      */
     public function index()
     {
-        //
+        $complains = Complain::all();
+        return view('admin.complain.index')->with([
+            'complains' => $complains
+        ]);
     }
 
     /**

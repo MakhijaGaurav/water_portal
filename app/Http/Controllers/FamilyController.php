@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Family;
+use App\FamilyUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FamilyController extends Controller
 {
@@ -13,7 +16,14 @@ class FamilyController extends Controller
      */
     public function index()
     {
-        //
+        $family = Family::join('family_users','family_users.family_id','=','families.id')
+                            ->groupBy('families.id')
+                            ->selectRaw('*,count(user_id) AS total_members')
+                            ->get();
+        return view('admin.family.index')->with([
+            'families' => $family,
+            'count' => 1
+        ]);
     }
 
     /**
@@ -34,7 +44,8 @@ class FamilyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
+        return "Hello Bitch Your Family came here!";
     }
 
     /**
@@ -81,4 +92,10 @@ class FamilyController extends Controller
     {
         //
     }
+
+    public function addFamily()
+    {
+        return view('admin.family.create');
+    }
+
 }
