@@ -47,3 +47,6 @@ Route::get('check/{rfid}','Api\RfidController@checkIfValid');
 
 //get meter reading
 Route::get('/rfid/{rfid}/consumption/{consumption}','Api\RfidController@recordConsumption');
+
+
+Route::post('/complain','Api\ComplainRestController@store');
