@@ -13,7 +13,7 @@ class AddUseridToComplains extends Migration
      */
     public function up()
     {
-        Schema::table('Complain', function (Blueprint $table) {
+        Schema::table('complains', function (Blueprint $table) {
             $table->bigInteger('user_id')->after('id');
         });
     }
@@ -25,7 +25,7 @@ class AddUseridToComplains extends Migration
      */
     public function down()
     {
-        Schema::table('Complain', function (Blueprint $table) {
+        Schema::table('complains', function (Blueprint $table) {
             //
         });
     }
