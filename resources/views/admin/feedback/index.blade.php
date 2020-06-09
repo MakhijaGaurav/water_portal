@@ -27,6 +27,19 @@
                     </thead>
 
                     <tbody>
+                    @foreach($feedbacks as $feedback)
+                        <tr>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$feedback->name}}</td>
+                            <td>{{$feedback->msg}}</td>
+                            <td>
+                                @for ($i = 0; $i < $feedback->rating; $i++)
+                                   <i class="fa fa-star"></i>
+                                @endfor
+                            </td>
+                            <td>{{$feedback->created_at}}</td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

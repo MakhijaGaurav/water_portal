@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Feedback;
 use Illuminate\Http\Request;
 
 class FeedbackController extends Controller
@@ -13,7 +14,10 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        return view('admin.feedback.index');
+        $feedbacks = Feedback::all();
+        return view('admin.feedback.index')->with([
+            'feedbacks' => $feedbacks
+        ]);
     }
 
     /**
