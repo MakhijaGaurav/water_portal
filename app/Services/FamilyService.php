@@ -10,7 +10,7 @@ class FamilyService{
             "surname" => $surname,
             "head" => $head,
             "address_first_line" => $address_first_line,
-            "address_second_line" => $address_second_line,
+            "address_second_line" =>     $address_second_line,
             "address_landmark" => $address_landmark,
             "address_city" => $address_city,
             "address_state" => $address_state,
